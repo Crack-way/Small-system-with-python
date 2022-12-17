@@ -18,6 +18,7 @@ incomePerMonth=[]
 def Staff_Info():
     n=int(input("Please enter the number of staff you wanted to provide data"))
     for i in range(n):
+        input((f"Enter for the staff [{i + 1}]"))
         Staff_No.append(input(f"Enter Staff Name [{i+1}]"))
         address.append(input(f"Enter Address [{i+1}] "))
         panNo.append(input(f"Enter Pan No [{i+ 1}]"))
@@ -104,14 +105,11 @@ def Calculate_Tax_Of_Staff_Unmarried(income):
    
 
 def display_Staff_Info(name,address,panNo,status,fiscalyear,income,taxAmount,incomeAfterTax):
-    print("Staff name:"+ name)
-    print("Address:"+ address)
-    print("panNo:"+panNo)
-    print("Status:"+status)
-    print("FiscalYear:"+fiscalyear)
+    print("Staff name:{0}               Address:{1}".format(name,address))
+    print("PAN NO: {p}      FY: {q}      Married Status={r}".format(p=panNo,q=fiscalyear,r=status))
     print("Income:"+str(income))
-    print("Tax amount:"+str(taxAmount))
-    print("IncomeAfterTax"+str(incomeAfterTax))
+    print("Staff {a} with PAN {b} fall under + Tax salb.".format(a=name,b=panNo))
+    print("{a}  ({b}) to pay the government is [Rs.]= {c}".format(a=name,b=panNo,c=taxAmount))
     #Writing down in the file
     lines=["Name:"+name,"Address:" +address ,"PanNo" + panNo,"Status"+status,"Fiscalyear"+fiscalyear,"Income before tax:"+
      str(income)+ "Tax Amount:" +str(taxAmount), "Income after tax:"+ str(incomeAfterTax)]
