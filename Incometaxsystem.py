@@ -121,7 +121,7 @@ def display_Staff_Info(name,address,panNo,status,fiscalyear,income,taxPercent,ta
     print("Staff name:{0}               Address:{1}".format(name,address))
     print("PAN NO: {p}      FY: {q}      Married Status={r}".format(p=panNo,q=fiscalyear,r=status))
     print("Income:"+str(income))
-    print("Staff {a} with PAN {b} fall under {c} Tax salb.".format(a=name,b=panNo,c=taxPercent))
+    print("Staff {a} with PAN {b} fall under {c}% Tax salb.".format(a=name,b=panNo,c=taxPercent))
     print("{a}  ({b}) to pay the government is [Rs.]= {c}".format(a=name,b=panNo,c=taxAmount))
     #Writing down in the file
     lines=["Name:"+name,"Address:" +address ,"PanNo" + panNo,"Status"+status,"Fiscalyear"+fiscalyear,"Income before tax:"+
