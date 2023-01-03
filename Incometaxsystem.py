@@ -115,13 +115,17 @@ def Calculate_Tax_Of_Staff_Unmarried(income):
     taxAmount=(10/100 *(100000)) + (1/100 *(450000))+ (20/100 *(200000)) + (30/100 * (1250000)) + (36/100 * (extra))
 
   return taxPercent,taxAmount, incomeAfterTax
+
+def display_static_Infor(name,address,panNo,status,fiscalyear):
+    print("Staff name:{0}               Address:{1}".format(name,address))
+    print("PAN NO: {p}      FY: {q}      Married Status={r}".format(p=panNo,q=fiscalyear,r=status))
    
 
 def display_Staff_Info(name,address,panNo,status,fiscalyear,income,taxPercent,taxAmount,incomeAfterTax):
     print("Staff name:{0}               Address:{1}".format(name,address))
     print("PAN NO: {p}      FY: {q}      Married Status={r}".format(p=panNo,q=fiscalyear,r=status))
     print("Income:"+str(income))
-    print("Staff {a} with PAN {b} fall under {c}% Tax salb.".format(a=name,b=panNo,c=taxPercent))
+    print("Staff {a} with PAN {b} fall under {c}%  Tax salb.".format(a=name,b=panNo,c=taxPercent))
     print("{a}  ({b}) to pay the government is [Rs.]= {c}".format(a=name,b=panNo,c=taxAmount))
     #Writing down in the file
     lines=["Name:"+name,"Address:" +address ,"PanNo" + panNo,"Status"+status,"Fiscalyear"+fiscalyear,"Income before tax:"+
